@@ -1,21 +1,19 @@
 # Automated-Infrastructure-for-portfolio-web-application
-in this project i have used Treeaform for IaC 
-# Terraform Web Application Infrastructure Project
 
-This project automates the deployment of infrastructure for a simple web application using Terraform on AWS. The setup includes a VPC, subnets, an EC2 instance, an ELB, and an S3 bucket for storage. This document provides step-by-step instructions and an architecture flow chart.
+This project automates the deployment of infrastructure for a simple portfolio web application using Terraform on AWS. The setup includes a VPC, subnets, an EC2 instance, an ELB, and an S3 bucket for storage. This document provides step-by-step instructions and an architecture flow chart.
 
 ## Project Structure
 
 ```plaintext
-terraform-web-app/
-├── provider.tf        # Provider configuration for AWS
-├── network.tf         # VPC, Subnet, and Internet Gateway setup
-├── ec2.tf             # EC2 instance configuration
-├── elb.tf             # Elastic Load Balancer setup
-├── s3.tf              # S3 bucket setup
-├── variables.tf       # Variables used in the Terraform scripts
-├── outputs.tf         # Outputs to display resources created
-├── .gitignore         # Files to ignore in the Git repository
+terraform-portfolio-web-app/
+provider.tf        # Provider configuration for AWS
+network.tf         # VPC, Subnet, and Internet Gateway setup
+ec2.tf             # EC2 instance configuration
+elb.tf             # Elastic Load Balancer setup
+s3.tf              # S3 bucket setup
+variables.tf       # Variables used in the Terraform scripts
+outputs.tf         # Outputs to display resources created
+.gitignore         # Files to ignore in the Git repository
 ```
 
 ---
@@ -120,17 +118,7 @@ terraform destroy
 The architecture is visually represented below:
 
 ```plaintext
-[ AWS VPC ]
-   |
-   +---> [ Public Subnet ] --> [ Internet Gateway ]
-   |             |
-   |             +---> [ Elastic Load Balancer ]
-   |                           |
-   |                           +---> [ EC2 Instance ]
-   |
-   +---> [ Private Subnet ]
-   |
-   +---> [ S3 Bucket ]
+
 ```
 
 The flow chart image (`architecture_diagram.png`) includes the logos of AWS, VPC, EC2, ELB, and S3.
